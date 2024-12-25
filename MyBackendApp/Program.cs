@@ -1,21 +1,36 @@
-using Microsoft.AspNetCore.Builder;
-using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Hosting;
+using MyBackendApp.Models;
+using Microsoft.EntityFrameworkCore;
+using Pomelo.EntityFrameworkCore.MySql.Infrastructure;
 
 var builder = WebApplication.CreateBuilder(args);
 
-builder.Services.AddControllersWithViews();
+// Add services to the container
+builder.Services.AddControllers();
 
-builder.WebHost.ConfigureKestrel(options =>
+// Configure CORS (optional)
+builder.Services.AddCors(options =>
 {
-    
-    options.Configure(builder.Configuration.GetSection("Kestrel"));
+    options.AddPolicy("AllowAll", policy =>
+    {
+        policy.AllowAnyOrigin()
+              .AllowAnyHeader()
+              .AllowAnyMethod();
+    });
 });
+
+// Add database context (ensure connection string is correct)
+builder.Services.AddDbContext<AppDbContext>(options =>
+    options.UseMySql(builder.Configuration.GetConnectionString("MySqlConnection"),
+    ServerVersion.AutoDetect(builder.Configuration.GetConnectionString("MySqlConnection"))));
 
 var app = builder.Build();
 
-app.UseRouting();
+// Use CORS
+app.UseCors("AllowAll");
 
-app.MapControllers();
+// Configure routing
+app.MapGet("/", () => "Welcome to the API!"); // Root endpoint
+app.MapControllers(); // Map API controllers
 
+// Start the application
 app.Run();
