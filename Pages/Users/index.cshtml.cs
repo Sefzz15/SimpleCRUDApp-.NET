@@ -1,17 +1,13 @@
-using System;
-using System.Collections.Generic;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc.RazorPages;
-using Microsoft.Extensions.Logging;
 using MySql.Data.MySqlClient;
 
 namespace backend.Pages.Users
 {
-    public class index : PageModel
+    public class indexModel : PageModel
     {
-        private readonly ILogger<index> _logger;
+        private readonly ILogger<indexModel> _logger;
 
-        public index(ILogger<index> logger)
+        public indexModel(ILogger<indexModel> logger)
         {
             _logger = logger;
         }
@@ -23,7 +19,6 @@ namespace backend.Pages.Users
             try
             {
                 string connectionString = "Server=localhost;Database=mydatabase;User=root;Password=123456;";
-
                 using (MySqlConnection connection = new MySqlConnection(connectionString))
                 {
                     connection.Open();

@@ -1,0 +1,23 @@
+@page
+@model backend.Pages.Users.Delete
+@{
+    ViewData["Title"] = "Delete";
+}
+<div class="mx-auto rounded border p4" style="width: 400px;">
+    <h2 class="text-center mb-3">Delete User</h2>
+    <hr />
+    <p>Are you sure you want to Delete this user?</p>
+    <p>Customer ID=@Request.Query["uid"]</p>
+    <hr />
+
+
+    <form method="post">
+        <div class="row">
+            <div class="col-6">
+                <button type="submit" class="btn btn-danger">Delete</button>
+            </div>
+            <div class="col-6 d-grid">
+                <a class="btn btn-outline-danger" href="/Users/Index">Cancel</a>
+            </div>
+    </form>
+</div>
