@@ -1,0 +1,35 @@
+@page
+@model backend.Pages.Users.index
+@{
+    ViewData["Title"] = "User List";
+}
+
+<h1>@ViewData["Title"]</h1>
+<h2>Users</h2>
+
+<a class="btn btn-primary mb-3" href="/Users/Create"> New User</a>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Password</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var user in Model.Users)
+        {
+            <tr>
+                <td>@user.uid</td>
+                <td>@user.uname</td>
+                <td>@user.upass</td>
+                <td>
+                    <a class="btn btn-primary btn-sm"  href="/Users/Edit">Edit</a>
+                    <a class="btn btn-primary btn-sm"  href="/Users/Delete">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
