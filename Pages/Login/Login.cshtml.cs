@@ -2,18 +2,17 @@ using System.ComponentModel.DataAnnotations;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using MySql.Data.MySqlClient;
-using BCrypt.Net;  // Βιβλιοθήκη για το hashing του κωδικού
+using BCrypt.Net;
 
-namespace backend.Pages.Users
+namespace backend.Pages.Login
 {
-    public class Create : PageModel
+    public class Login : PageModel
     {
         [BindProperty, Required(ErrorMessage = "Please enter a user name")]
         public string uname { get; set; } = "";
+
         [BindProperty, Required(ErrorMessage = "Please enter a user password")]
         public string upass { get; set; } = "";
-
-        public void OnGet() { }
 
         public string ErrorMessage { get; set; } = "";
 
@@ -26,30 +25,41 @@ namespace backend.Pages.Users
 
             try
             {
-                // Hashing του password πριν το αποθηκεύσουμε
-                string hashedPassword = BCrypt.Net.BCrypt.HashPassword(upass);
-
                 string connectionString = "Server=localhost;Database=mydatabase;User=root;Password=123456;";
                 using (MySqlConnection connection = new MySqlConnection(connectionString))
                 {
                     connection.Open();
-                    string sql = "INSERT INTO Users (uname, upass) VALUES (@uname, @upass)";
 
+                    string sql = "SELECT * FROM Users WHERE uname = @uname";
                     using (MySqlCommand command = new MySqlCommand(sql, connection))
                     {
-                        // Χρησιμοποιούμε τον hashed κωδικό για αποθήκευση
                         command.Parameters.AddWithValue("@uname", uname);
-                        command.Parameters.AddWithValue("@upass", hashedPassword);
-                        command.ExecuteNonQuery();
+                        using (MySqlDataReader reader = command.ExecuteReader())
+                        {
+                            if (reader.Read())
+                            {
+                                string storedHash = reader.GetString("upass");
+                                if (BCrypt.Net.BCrypt.Verify(upass, storedHash))
+                                {
+                                    Response.Redirect("/Users");
+                                }
+                                else
+                                {
+                                    ErrorMessage = "Invalid password.";
+                                }
+                            }
+                            else
+                            {
+                                ErrorMessage = "Username not found.";
+                            }
+                        }
                     }
                 }
             }
             catch (Exception ex)
             {
                 ErrorMessage = ex.Message;
-                return;
             }
-            Response.Redirect("/Users/Index");
         }
     }
 }

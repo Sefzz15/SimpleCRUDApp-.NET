@@ -1,17 +1,17 @@
 @page
-@model backend.Pages.Users.Create
+@model backend.Pages.Login.Login
 @{
-    ViewData["Title"] = "Create";
+    ViewData["Title"] = "Login";
 }
 
-<div class="=row">
-    <div class="col-md-8 mx-auro rounded border p-4">
-        <h2 class="text-center mb-5">New User</h2>
+<div class="row">
+    <div class="col-md-6 mx-auto rounded border p-4">
+        <h2 class="text-center mb-5">User Login</h2>
 
         @if (Model.ErrorMessage.Length > 0)
         {
-            <div class="alert alert-danger alert alert-dismissible fade show" role="alert">
-                <string>@Model.ErrorMessage</string>
+            <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                <strong>@Model.ErrorMessage</strong>
                 <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
             </div>
         }
@@ -29,21 +29,20 @@
             <div class="row mb-3">
                 <label for="upass" class="col-sm-4 col-form-label">Password</label>
                 <div class="col-sm-8">
-                    <input type="password" id="upass" class="form-control" asp-for="upass" />
+                    <input id="upass" type="password" class="form-control" asp-for="upass" />
                     <span asp-validation-for="upass" class="text-danger"></span>
                 </div>
             </div>
 
             <div class="row">
                 <div class="offset-sm-4 col-sm-4 d-grid">
-                    <button type="submit" class="btn btn-primary">Create</button>
+                    <button type="submit" class="btn btn-primary">Login</button>
                 </div>
                 <div class="col-sm-4 d-grid">
-                    <a class="btn btn-outline-primary" href="/Users/index" role="button">Cancel</a>
+                    <a class="btn btn-outline-primary" href="/Users/Create" role="button">Create New Account</a>
                 </div>
             </div>
 
         </form>
-
     </div>
 </div>

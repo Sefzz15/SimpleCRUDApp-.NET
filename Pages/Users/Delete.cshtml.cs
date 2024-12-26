@@ -9,7 +9,6 @@ namespace backend.Pages.Users
         {
         }
 
-
         public void OnPost(int uid)
         {
             deleteUser(uid);
@@ -38,7 +37,6 @@ namespace backend.Pages.Users
             {
                 Console.WriteLine("Cannot delete User:" + ex.Message);
             }
-
             Response.Redirect("/Users/Index");
         }
     }
