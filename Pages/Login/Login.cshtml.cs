@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using MySql.Data.MySqlClient;
 using BCrypt.Net;
+using Microsoft.AspNetCore.Http;
 
 namespace backend.Pages.Login
 {
@@ -39,8 +40,11 @@ namespace backend.Pages.Login
                             if (reader.Read())
                             {
                                 string storedHash = reader.GetString("upass");
+
                                 if (BCrypt.Net.BCrypt.Verify(upass, storedHash))
                                 {
+                                    HttpContext.Session.SetString("Username", uname);
+
                                     Response.Redirect("/Users");
                                 }
                                 else

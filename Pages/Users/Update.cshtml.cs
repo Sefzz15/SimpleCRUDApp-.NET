@@ -33,9 +33,9 @@ namespace backend.Pages.Users
                         {
                             if (reader.Read())
                             {
-                                this.uid = reader.GetInt32(0);   // Set the ID
-                                uname = reader.GetString(1);     // Set the username
-                                upass = reader.GetString(2);     // Set the password (this can be hashed, but we show the plain one for editing)
+                                this.uid = reader.GetInt32(0);
+                                uname = reader.GetString(1);
+                                upass = reader.GetString(2);
                             }
                             else
                             {
@@ -60,11 +60,10 @@ namespace backend.Pages.Users
 
             try
             {
-                string hashedPassword = upass;  // Default, no change to password
-                // Check if the password was changed (if it's different from the one initially fetched)
+                string hashedPassword = upass;
                 if (!string.IsNullOrEmpty(upass))
                 {
-                    hashedPassword = BCrypt.Net.BCrypt.HashPassword(upass);  // Hash the new password
+                    hashedPassword = BCrypt.Net.BCrypt.HashPassword(upass);
                 }
 
                 string connectionString = "Server=localhost;Database=mydatabase;User=root;Password=123456;";
@@ -77,7 +76,7 @@ namespace backend.Pages.Users
                     {
                         command.Parameters.AddWithValue("@uid", uid);
                         command.Parameters.AddWithValue("@uname", uname);
-                        command.Parameters.AddWithValue("@upass", hashedPassword);  // Save the hashed password
+                        command.Parameters.AddWithValue("@upass", hashedPassword);
 
                         int rowsAffected = command.ExecuteNonQuery();
 

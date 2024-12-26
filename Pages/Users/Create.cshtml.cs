@@ -2,7 +2,7 @@ using System.ComponentModel.DataAnnotations;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using MySql.Data.MySqlClient;
-using BCrypt.Net;  // Βιβλιοθήκη για το hashing του κωδικού
+using BCrypt.Net;
 
 namespace backend.Pages.Users
 {
@@ -26,7 +26,6 @@ namespace backend.Pages.Users
 
             try
             {
-                // Hashing του password πριν το αποθηκεύσουμε
                 string hashedPassword = BCrypt.Net.BCrypt.HashPassword(upass);
 
                 string connectionString = "Server=localhost;Database=mydatabase;User=root;Password=123456;";
@@ -37,7 +36,6 @@ namespace backend.Pages.Users
 
                     using (MySqlCommand command = new MySqlCommand(sql, connection))
                     {
-                        // Χρησιμοποιούμε τον hashed κωδικό για αποθήκευση
                         command.Parameters.AddWithValue("@uname", uname);
                         command.Parameters.AddWithValue("@upass", hashedPassword);
                         command.ExecuteNonQuery();
