@@ -7,8 +7,8 @@ namespace backend.Pages.Users
 {
     public class Create : PageModel
     {
-        [BindProperty, Required(ErrorMessage = "Please enter a user ID")]
-        public int uid { get; set; }
+        // [BindProperty, Required(ErrorMessage = "Please enter a user ID")]
+        // public int uid { get; set; }
         [BindProperty, Required(ErrorMessage = "Please enter a user name")]
         public string uname { get; set; } = "";
         [BindProperty, Required(ErrorMessage = "Please enter a user password")]
@@ -31,11 +31,12 @@ namespace backend.Pages.Users
                 {
                     connection.Open();
 
-                    string sql = "INSERT INTO Users (uid, uname, upass) VALUES (@uid, @uname, @upass)";
+                    // string sql = "INSERT INTO Users (uid, uname, upass) VALUES (@uid, @uname, @upass)";
+                    string sql = "INSERT INTO Users (uname, upass) VALUES (@uname, @upass)";
 
                     using (MySqlCommand command = new MySqlCommand(sql, connection))
                     {
-                        command.Parameters.AddWithValue("@uid", uid);
+                        // command.Parameters.AddWithValue("@uid", uid);
                         command.Parameters.AddWithValue("@uname", uname);
                         command.Parameters.AddWithValue("@upass", upass);
 
