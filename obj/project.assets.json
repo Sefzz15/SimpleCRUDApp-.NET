@@ -2891,9 +2891,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\arsse\\Documents\\VisualStudioProjects\\SimpleCRUDApp-.NET\\backend.csproj",
-      "projectName": "backend",
-      "projectPath": "C:\\Users\\arsse\\Documents\\VisualStudioProjects\\SimpleCRUDApp-.NET\\backend.csproj",
+      "projectUniqueName": "C:\\Users\\arsse\\Documents\\VisualStudioProjects\\SimpleCRUDApp-.NET\\SimpleCRUDApp.csproj",
+      "projectName": "SimpleCRUDApp",
+      "projectPath": "C:\\Users\\arsse\\Documents\\VisualStudioProjects\\SimpleCRUDApp-.NET\\SimpleCRUDApp.csproj",
       "packagesPath": "C:\\Users\\arsse\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\arsse\\Documents\\VisualStudioProjects\\SimpleCRUDApp-.NET\\obj\\",
       "projectStyle": "PackageReference",

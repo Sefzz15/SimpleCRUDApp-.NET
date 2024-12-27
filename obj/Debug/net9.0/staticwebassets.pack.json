@@ -1,8 +1,8 @@
 {
   "Files": [
     {
-      "Id": "C:\\Users\\arsse\\Documents\\VisualStudioProjects\\SimpleCRUDApp-.NET\\obj\\Debug\\net9.0\\scopedcss\\projectbundle\\backend.bundle.scp.css",
-      "PackagePath": "staticwebassets\\backend.le8vcpqjka.bundle.scp.css"
+      "Id": "C:\\Users\\arsse\\Documents\\VisualStudioProjects\\SimpleCRUDApp-.NET\\obj\\Debug\\net9.0\\scopedcss\\projectbundle\\SimpleCRUDApp.bundle.scp.css",
+      "PackagePath": "staticwebassets\\SimpleCRUDApp.igpoc2bgss.bundle.scp.css"
     },
     {
       "Id": "C:\\Users\\arsse\\Documents\\VisualStudioProjects\\SimpleCRUDApp-.NET\\wwwroot\\css\\site.css",
@@ -257,24 +257,24 @@
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.slim.min.map"
     },
     {
-      "Id": "obj\\Debug\\net9.0\\staticwebassets\\msbuild.backend.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
+      "Id": "obj\\Debug\\net9.0\\staticwebassets\\msbuild.SimpleCRUDApp.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
       "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssetEndpoints.props"
     },
     {
-      "Id": "obj\\Debug\\net9.0\\staticwebassets\\msbuild.backend.Microsoft.AspNetCore.StaticWebAssets.props",
+      "Id": "obj\\Debug\\net9.0\\staticwebassets\\msbuild.SimpleCRUDApp.Microsoft.AspNetCore.StaticWebAssets.props",
       "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
     },
     {
-      "Id": "obj\\Debug\\net9.0\\staticwebassets\\msbuild.build.backend.props",
-      "PackagePath": "build\\backend.props"
+      "Id": "obj\\Debug\\net9.0\\staticwebassets\\msbuild.build.SimpleCRUDApp.props",
+      "PackagePath": "build\\SimpleCRUDApp.props"
     },
     {
-      "Id": "obj\\Debug\\net9.0\\staticwebassets\\msbuild.buildMultiTargeting.backend.props",
-      "PackagePath": "buildMultiTargeting\\backend.props"
+      "Id": "obj\\Debug\\net9.0\\staticwebassets\\msbuild.buildMultiTargeting.SimpleCRUDApp.props",
+      "PackagePath": "buildMultiTargeting\\SimpleCRUDApp.props"
     },
     {
-      "Id": "obj\\Debug\\net9.0\\staticwebassets\\msbuild.buildTransitive.backend.props",
-      "PackagePath": "buildTransitive\\backend.props"
+      "Id": "obj\\Debug\\net9.0\\staticwebassets\\msbuild.buildTransitive.SimpleCRUDApp.props",
+      "PackagePath": "buildTransitive\\SimpleCRUDApp.props"
     }
   ],
   "ElementsToRemove": []
