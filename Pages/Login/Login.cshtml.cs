@@ -5,7 +5,7 @@ using MySql.Data.MySqlClient;
 using BCrypt.Net;
 using Microsoft.AspNetCore.Http;
 
-namespace backend.Pages.Login
+namespace SimpleCRUDApp.Pages.Login
 {
     public class Login : PageModel
     {

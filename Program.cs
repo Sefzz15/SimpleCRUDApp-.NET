@@ -1,4 +1,4 @@
-using backend.Middleware;
+using SimpleCRUDApp.Middleware;
 
 var builder = WebApplication.CreateBuilder(args);
 

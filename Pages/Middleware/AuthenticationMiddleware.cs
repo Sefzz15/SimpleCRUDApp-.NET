@@ -1,7 +1,7 @@
 using Microsoft.AspNetCore.Http;
 using System.Threading.Tasks;
 
-namespace backend.Middleware
+namespace SimpleCRUDApp.Middleware
 {
     public class AuthenticationMiddleware
     {

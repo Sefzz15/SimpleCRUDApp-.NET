@@ -4,7 +4,7 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using MySql.Data.MySqlClient;
 using BCrypt.Net;
 
-namespace backend.Pages.Users
+namespace SimpleCRUDApp.Pages.Users
 {
     public class Create : PageModel
     {

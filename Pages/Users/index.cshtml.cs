@@ -1,7 +1,7 @@
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using MySql.Data.MySqlClient;
 
-namespace backend.Pages.Users
+namespace SimpleCRUDApp.Pages.Users
 {
     public class indexModel : PageModel
     {
