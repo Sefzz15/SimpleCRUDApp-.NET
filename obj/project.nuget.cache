@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "sCLSlExwyvc=",
+  "dgSpecHash": "E2mye2p37ec=",
   "success": true,
-  "projectFilePath": "C:\\Users\\arsse\\Documents\\VisualStudioProjects\\backend\\backend.csproj",
+  "projectFilePath": "C:\\Users\\arsse\\Documents\\VisualStudioProjects\\SimpleCRUDApp-.NET\\backend.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\arsse\\.nuget\\packages\\azure.core\\1.38.0\\azure.core.1.38.0.nupkg.sha512",
     "C:\\Users\\arsse\\.nuget\\packages\\azure.identity\\1.11.4\\azure.identity.1.11.4.nupkg.sha512",
