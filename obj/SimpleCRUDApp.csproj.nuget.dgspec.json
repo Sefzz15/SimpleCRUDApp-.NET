@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\arsse\\Documents\\VisualStudioProjects\\SimpleCRUDApp-.NET\\SimpleCRUDApp.csproj": {}
+    "C:\\Users\\Sefzz\\Documents\\Visual Studio Code Projects\\SimpleCRUDApp-.NET\\SimpleCRUDApp.csproj": {}
   },
   "projects": {
-    "C:\\Users\\arsse\\Documents\\VisualStudioProjects\\SimpleCRUDApp-.NET\\SimpleCRUDApp.csproj": {
+    "C:\\Users\\Sefzz\\Documents\\Visual Studio Code Projects\\SimpleCRUDApp-.NET\\SimpleCRUDApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\arsse\\Documents\\VisualStudioProjects\\SimpleCRUDApp-.NET\\SimpleCRUDApp.csproj",
+        "projectUniqueName": "C:\\Users\\Sefzz\\Documents\\Visual Studio Code Projects\\SimpleCRUDApp-.NET\\SimpleCRUDApp.csproj",
         "projectName": "SimpleCRUDApp",
-        "projectPath": "C:\\Users\\arsse\\Documents\\VisualStudioProjects\\SimpleCRUDApp-.NET\\SimpleCRUDApp.csproj",
-        "packagesPath": "C:\\Users\\arsse\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\arsse\\Documents\\VisualStudioProjects\\SimpleCRUDApp-.NET\\obj\\",
+        "projectPath": "C:\\Users\\Sefzz\\Documents\\Visual Studio Code Projects\\SimpleCRUDApp-.NET\\SimpleCRUDApp.csproj",
+        "packagesPath": "C:\\Users\\Sefzz\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Sefzz\\Documents\\Visual Studio Code Projects\\SimpleCRUDApp-.NET\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\arsse\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\Sefzz\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net9.0"
@@ -46,7 +46,7 @@
           "dependencies": {
             "BCrypt.Net-Next": {
               "target": "Package",
-              "version": "[4.0.0, )"
+              "version": "[4.0.3, )"
             },
             "Microsoft.Data.SqlClient": {
               "target": "Package",

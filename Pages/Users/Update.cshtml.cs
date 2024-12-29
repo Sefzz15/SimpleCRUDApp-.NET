@@ -20,7 +20,7 @@ namespace SimpleCRUDApp.Pages.Users
         {
             try
             {
-                string connectionString = "Server=localhost;Database=mydatabase;User=root;Password=123456;";
+                string connectionString = "Server=localhost;Database=mydatabase;User=root;Password=root;";
                 using (MySqlConnection connection = new MySqlConnection(connectionString))
                 {
                     connection.Open();
@@ -66,7 +66,7 @@ namespace SimpleCRUDApp.Pages.Users
                     hashedPassword = BCrypt.Net.BCrypt.HashPassword(upass);
                 }
 
-                string connectionString = "Server=localhost;Database=mydatabase;User=root;Password=123456;";
+                string connectionString = "Server=localhost;Database=mydatabase;User=root;Password=root;";
                 using (MySqlConnection connection = new MySqlConnection(connectionString))
                 {
                     connection.Open();

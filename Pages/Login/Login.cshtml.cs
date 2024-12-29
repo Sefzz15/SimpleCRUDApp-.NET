@@ -26,7 +26,7 @@ namespace SimpleCRUDApp.Pages.Login
 
             try
             {
-                string connectionString = "Server=localhost;Database=mydatabase;User=root;Password=123456;";
+                string connectionString = "Server=localhost;Database=mydatabase;User=root;Password=root;";
                 using (MySqlConnection connection = new MySqlConnection(connectionString))
                 {
                     connection.Open();
